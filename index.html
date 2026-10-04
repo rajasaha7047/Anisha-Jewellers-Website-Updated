@@ -1,195 +1,716 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="theme-color" content="#15120f">
-  <meta name="description" content="New Anisha Jewellers — premium gold and silver jewellery catalogue in Bikour. Browse designs, enquire on WhatsApp and visit our showroom.">
-  <meta property="og:title" content="New Anisha Jewellers | Gold & Silver">
-  <meta property="og:description" content="Premium jewellery catalogue, WhatsApp enquiry and showroom visit-first experience.">
-  <meta property="og:image" content="images/enhanced/shop-hero-desktop.webp">
-  <title>New Anisha Jewellers | Gold & Silver</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
+<meta name="theme-color" content="#1A1410">
+<meta name="description" content="New Anisha Jewellers — premium gold and silver jewellery in Bikour, West Bengal. BIS Hallmark certified.">
+<title>New Anisha Jewellers | Gold & Silver</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header" id="site-header">
-    <div class="header-inner">
-      <button class="brand" data-page-target="home" aria-label="Go to home">
-        <img src="images/aj-logo.png" alt="New Anisha Jewellers logo">
-        <span><strong>New Anisha Jewellers</strong><small>GOLD &amp; SILVER</small></span>
+
+<div class="page-loader" id="page-loader">
+  <div class="loader-mark">AJ</div>
+  <div class="loader-text">NEW ANISHA JEWELLERS</div>
+</div>
+
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursor-dot"></div>
+
+<!-- HEADER -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="#home" class="brand">
+      <img src="images/aj-logo.png" alt="New Anisha Jewellers">
+      <span><strong>New Anisha</strong><small>JEWELLERS · BIKOUR</small></span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="#collections">Catalogue</a>
+      <a href="#bridal">Bridal</a>
+      <a href="#gallery">Showroom</a>
+      <a href="#gold-rate">Gold Rate</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#about">Story</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="search-open" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </button>
-      <nav class="desktop-nav" aria-label="Primary navigation">
-        <button data-page-target="home">Home</button>
-        <button data-page-target="collections">Catalogue</button>
-        <button data-page-target="collections" data-filter-link="Bridal">Bridal</button>
-        <button data-page-target="gallery">Showroom</button>
-        <button data-page-target="about">Our Story</button>
-        <button data-page-target="visit">Visit Store</button>
-      </nav>
-      <div class="header-actions">
-        <button class="icon-btn" id="wishlist-top" aria-label="Wishlist">♡<span class="count-badge" id="wishlist-count">0</span></button>
-        <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+      <button class="icon-btn" id="wishlist-top" aria-label="Shortlist">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span class="count-badge" id="wishlist-count">0</span>
+      </button>
+      <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="menu-top">
+    <a href="#home" class="brand brand-light">
+      <img src="images/aj-logo.png" alt="">
+      <span><strong>New Anisha</strong><small>JEWELLERS</small></span>
+    </a>
+    <button class="menu-close" id="menu-close" aria-label="Close">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
+  </div>
+  <div class="menu-hero">
+    <img src="images/catalogue/enhanced/pearl-choker.webp" alt="">
+    <span class="menu-hero-tag">BIS Hallmark · Gold & Silver</span>
+  </div>
+  <nav class="menu-nav">
+    <a href="#collections"><span>01</span>Catalogue<i>→</i></a>
+    <a href="#bridal"><span>02</span>Bridal<i>→</i></a>
+    <a href="#gold-rate"><span>03</span>Gold Rate<i>→</i></a>
+    <a href="#reviews"><span>04</span>Reviews<i>→</i></a>
+    <a href="#gallery"><span>05</span>Showroom<i>→</i></a>
+    <a href="#about"><span>06</span>Our Story<i>→</i></a>
+    <a href="#faq"><span>07</span>FAQ<i>→</i></a>
+    <a href="#visit"><span>08</span>Visit Store<i>→</i></a>
+  </nav>
+  <div class="menu-foot">
+    <p>Near Fitness Club Gym · Bikour · WB 733215</p>
+    <a href="https://wa.me/916295721021" target="_blank" rel="noopener" class="menu-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Enquiry
+    </a>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ HOME ============ -->
+<section id="home-page" class="page-section active">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-image">
+      <picture>
+        <source media="(max-width: 767px)" srcset="images/enhanced/hero-generated-mobile.webp">
+        <img src="images/enhanced/shop-exterior-enhanced.webp" alt="New Anisha Jewellers showroom" fetchpriority="high">
+      </picture>
+      <span class="hero-tag">EST. BIKOUR · WEST BENGAL</span>
+    </div>
+    <div class="hero-body">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="dot">◆</span>
+          <span>New Anisha Jewellers</span>
+        </div>
+        <h1 class="hero-title" data-split>
+          See the jewellery.<br>
+          <em>Choose it in person.</em>
+        </h1>
+        <p class="hero-sub">Premium gold and silver, BIS Hallmark certified. Browse, shortlist, enquire on WhatsApp, and visit our showroom for the final choice.</p>
+        <div class="hero-actions">
+          <a href="#collections" class="btn btn-solid">
+            Explore Catalogue
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#visit" class="btn btn-ghost">Plan a Visit</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>100+</strong><span>Designs</span></div>
+          <div><strong>10+</strong><span>Years</span></div>
+          <div><strong>BIS</strong><span>Hallmark</span></div>
+        </div>
       </div>
     </div>
-    <div class="mobile-menu" id="mobile-menu">
-      <button data-page-target="home">Home</button>
-      <button data-page-target="collections">Premium Catalogue</button>
-      <button data-page-target="collections" data-filter-link="Gold">Gold Collection</button>
-      <button data-page-target="collections" data-filter-link="Bridal">Bridal</button>
-      <button data-page-target="gallery">Showroom &amp; Gallery</button>
-      <button data-page-target="about">Our Story</button>
-      <button data-page-target="visit">Visit Store</button>
-      <a class="mobile-whatsapp" href="https://wa.me/916295721021" target="_blank" rel="noopener">WhatsApp Enquiry</a>
-    </div>
-  </header>
-
-  <main>
-    <section id="home-page" class="page-section active">
-      <div class="hero hero-premium">
-        <div class="hero-media">
-          <picture>
-            <source media="(max-width: 767px)" srcset="images/enhanced/hero-generated-mobile.webp">
-            <img src="images/enhanced/hero-generated-desktop.webp" alt="Premium jewellery showroom presentation for New Anisha Jewellers" fetchpriority="high">
-          </picture>
-          <span class="hero-media-label">Gold &amp; Silver · Bikour</span>
-        </div>
-        <div class="hero-content">
-          <div class="hero-copy">
-            <span class="eyebrow">NEW ANISHA JEWELLERS · BIKOUR</span>
-            <h1>See the jewellery.<br><em>Choose it in person.</em></h1>
-            <p>Browse the catalogue, shortlist your designs, ask on WhatsApp, then visit the showroom for the final choice.</p>
-            <div class="hero-actions">
-              <button class="btn btn-gold" data-page-target="collections">Explore Catalogue</button>
-              <a class="btn btn-light" href="https://wa.me/916295721021?text=Hello%20New%20Anisha%20Jewellers%2C%20I%20would%20like%20to%20see%20your%20latest%20designs." target="_blank" rel="noopener">WhatsApp Us</a>
-            </div>
-            <button class="visit-link" data-page-target="visit">◎ Plan a showroom visit</button>
-          </div>
-        </div>
-      </div>
-
-      <section class="trust-bar">
-        <div><b>01</b><span>Premium Catalogue</span></div>
-        <div><b>02</b><span>WhatsApp Enquiry</span></div>
-        <div><b>03</b><span>Store Visit First</span></div>
-        <div><b>04</b><span>Gold &amp; Silver</span></div>
-      </section>
-
-      <section class="section section-dark">
-        <div class="section-head light">
-          <span class="eyebrow">CURATED DISCOVERY</span>
-          <h2>Shop by <em>occasion.</em></h2>
-          <p>Start with what you are shopping for, then open the designs and ask us about weight, purity, price and availability.</p>
-        </div>
-        <div class="occasion-grid">
-          <button class="occasion-card tall" data-page-target="collections" data-filter-link="Bridal">
-            <img src="images/catalogue/enhanced/real-necklace.webp" alt="Bridal necklace reference">
-            <span>Bridal</span><small>Statement sets &amp; ceremony pieces</small>
-          </button>
-          <button class="occasion-card" data-page-target="collections" data-filter-link="Gold">
-            <img src="images/catalogue/enhanced/gold-bangle.webp" alt="Gold bangles sample catalogue image">
-            <span>Gold</span><small>Classic designs for every day</small>
-          </button>
-          <button class="occasion-card" data-page-target="collections" data-filter-link="Rings">
-            <img src="images/catalogue/enhanced/real-rings.webp" alt="Ring catalogue reference">
-            <span>Rings</span><small>Daily wear to special pieces</small>
-          </button>
-          <button class="occasion-card" data-page-target="collections" data-filter-link="Silver">
-            <img src="images/catalogue/enhanced/silver-rings.webp" alt="Silver rings sample catalogue image">
-            <span>Silver</span><small>Elegant, traditional &amp; gifting</small>
-          </button>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-head">
-          <span class="eyebrow">FEATURED DESIGNS</span>
-          <h2>Made to be <em>seen up close.</em></h2>
-          <p>Tap any design to view it large or send a WhatsApp enquiry with the design code already included.</p>
-        </div>
-        <div class="mini-grid" id="featured-grid"></div>
-        <div class="center"><button class="btn btn-dark" data-page-target="collections">View full catalogue</button></div>
-      </section>
-
-      <section class="editorial">
-        <div class="editorial-image"><img src="images/enhanced/showroom-editorial.webp" alt="Jewellery details from the New Anisha collection"></div>
-        <div class="editorial-copy glass-panel">
-          <span class="eyebrow">THE SHOWROOM EXPERIENCE</span>
-          <h2>Online for the <em>shortlist.</em><br>In-store for the <em>choice.</em></h2>
-          <p>See the finish, compare designs, check the details and speak directly with our team at the counter.</p>
-          <div class="feature-list">
-            <span>✓ Design shortlist</span><span>✓ WhatsApp assistance</span><span>✓ Store directions</span><span>✓ Personal consultation</span>
-          </div>
-          <button class="btn btn-gold" data-page-target="visit">Plan your visit</button>
-        </div>
-      </section>
-
-      <section class="section rate-strip">
-        <div><span class="eyebrow">TODAY'S RATE</span><h2>Ask us for the <em>current counter rate.</em></h2><p>Gold and silver rates can change. We keep the website free from stale prices — message us for today's rate before you visit.</p></div>
-        <a class="btn btn-dark" href="https://wa.me/916295721021?text=Hello%20New%20Anisha%20Jewellers%2C%20please%20share%20today%27s%20gold%20and%20silver%20rates." target="_blank" rel="noopener">Ask on WhatsApp</a>
-      </section>
-
-      <section class="section section-dark owners-teaser">
-        <div class="section-head light"><span class="eyebrow">MEET THE PEOPLE</span><h2>A family showroom, <em>person to person.</em></h2></div>
-        <div class="owner-teaser-grid">
-          <div><img src="images/owner-1.jpg" alt="Store owner photo"><span>Abhay Saha</span><small>Store Owner</small></div>
-          <div><img src="images/owner-2.jpg" alt="Store owner photo"><span>Bijay Saha</span><small>Store Owner</small></div>
-        </div>
-        <p class="owner-note">Original owner photos are preserved without enhancement or retouching.</p>
-      </section>
-
-      <section class="section visit-banner">
-        <span class="eyebrow">READY TO SEE IT?</span>
-        <h2>Bring your shortlist to <em>New Anisha Jewellers.</em></h2>
-        <p>Near Fitness Club Gym, 34 No. National Highway, Bikour, West Bengal 733215.</p>
-        <div class="hero-actions"><button class="btn btn-gold" data-page-target="visit">Visit Store</button><a class="btn btn-light-dark" href="https://wa.me/916295721021" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
-      </section>
-    </section>
-
-    <section id="collections-page" class="page-section page-shell">
-      <div class="catalogue-hero"><span class="eyebrow">NEW ANISHA · CATALOGUE</span><h1>Find your <em>next piece.</em></h1><p>Premium catalogue browsing with a store-visit-first enquiry journey.</p></div>
-      <div class="catalogue-toolbar">
-        <div class="filter-row" id="filter-row">
-          <button class="filter-btn active" data-category="All">All</button><button class="filter-btn" data-category="Gold">Gold</button><button class="filter-btn" data-category="Silver">Silver</button><button class="filter-btn" data-category="Rings">Rings</button><button class="filter-btn" data-category="Earrings">Earrings</button><button class="filter-btn" data-category="Necklaces">Necklaces</button><button class="filter-btn" data-category="Chains">Chains</button><button class="filter-btn" data-category="Pendants">Pendants</button><button class="filter-btn" data-category="Bracelets">Bracelets</button><button class="filter-btn" data-category="Sets">Sets</button><button class="filter-btn" data-category="Bangles">Bangles</button><button class="filter-btn" data-category="Bridal">Bridal</button><button class="filter-btn" data-category="Demo">Demo</button>
-        </div>
-        <div class="catalogue-tools"><label class="search-box">⌕<input id="search-input" type="search" placeholder="Search design or code"></label><select id="sort-select"><option value="featured">Featured</option><option value="name">Name A–Z</option><option value="category">Category</option></select></div>
-      </div>
-      <div class="catalogue-note"><span>REAL SHOWROOM PHOTOS</span><span>DEMO / SAMPLE DESIGNS ARE CLEARLY MARKED</span><span>PRICE &amp; WEIGHT ON REQUEST</span></div>
-      <div class="product-grid" id="product-grid"></div>
-    </section>
-
-    <section id="gallery-page" class="page-section page-shell"><div class="page-intro"><span class="eyebrow">REAL SHOWROOM</span><h1>See the <em>store.</em></h1><p>Real photos from New Anisha Jewellers, prepared for a clean mobile-first view.</p></div><div class="gallery-grid"><button class="gallery-card wide"><img src="images/enhanced/shop-exterior-enhanced.webp" alt="New Anisha Jewellers shop exterior"><span>Shop exterior</span></button><button class="gallery-card"><img src="images/catalogue/enhanced/real-necklace.webp" alt="Real necklace photo"><span>Necklace</span></button><button class="gallery-card"><img src="images/catalogue/enhanced/real-bangles.webp" alt="Real bangle photo"><span>Bangles</span></button><button class="gallery-card"><img src="images/catalogue/enhanced/real-earrings.webp" alt="Real earring photo"><span>Earrings</span></button><button class="gallery-card"><img src="images/catalogue/enhanced/real-bracelet.webp" alt="Real bracelet photo"><span>Bracelet</span></button><button class="gallery-card"><img src="images/catalogue/enhanced/real-rings.webp" alt="Real ring photo"><span>Rings</span></button></div></section>
-
-    <section id="about-page" class="page-section page-shell">
-      <div class="page-intro"><span class="eyebrow">OUR STORY</span><h1>Meet the <em>people.</em></h1><p>A simple family-showroom experience: browse online, ask questions on WhatsApp and come in to choose.</p></div>
-      <div class="owners-grid">
-        <article><img src="images/owner-1.jpg" alt="Abhay Saha"><div><span class="eyebrow">STORE OWNER</span><h2>Abhay Saha</h2><p>For enquiries and showroom assistance.</p><a href="https://wa.me/916295721021" target="_blank" rel="noopener">WhatsApp Abhay →</a></div></article>
-        <article><img src="images/owner-2.jpg" alt="Bijay Saha"><div><span class="eyebrow">STORE OWNER</span><h2>Bijay Saha</h2><p>For product and showroom assistance.</p><a href="https://wa.me/916297813053" target="_blank" rel="noopener">WhatsApp Bijay →</a></div></article>
-      </div>
-      <div class="owner-note large">Human photos are kept exactly as provided — no enhancement, retouching or AI modification.</div>
-    </section>
-
-    <section id="visit-page" class="page-section page-shell">
-      <div class="visit-layout">
-        <div><span class="eyebrow">STORE VISIT FIRST</span><h1>Come see it <em>in person.</em></h1><p class="lead">Shortlist online, message us for the details, then visit the showroom to compare the designs in person.</p><div class="visit-cards"><div><span>⌖</span><h3>Address</h3><p>Near Fitness Club Gym, 34 No. National Highway, Bikour, West Bengal 733215</p></div><div><span>◷</span><h3>Hours</h3><p>9:00 AM – 8:00 PM, daily</p></div><div><span>✆</span><h3>WhatsApp</h3><p>+91 62957 21021</p></div></div><div class="hero-actions"><a class="btn btn-gold" href="https://wa.me/916295721021?text=Hello%20New%20Anisha%20Jewellers%2C%20I%20would%20like%20to%20plan%20a%20showroom%20visit." target="_blank" rel="noopener">Plan on WhatsApp</a><a class="btn btn-outline-dark" href="tel:+916295721021">Call Store</a></div></div>
-        <div class="visit-image"><img src="images/enhanced/shop-hero-desktop.webp" alt="New Anisha Jewellers showroom"><div class="glass-panel visit-caption"><span class="eyebrow">BIKOUR</span><strong>New Anisha Jewellers</strong><small>Gold &amp; Silver</small></div></div>
-      </div>
-    </section>
-  </main>
-
-  <div class="lightbox" id="lightbox" aria-hidden="true"><div class="lightbox-backdrop" id="lightbox-backdrop"></div><div class="lightbox-panel"><button class="lightbox-close" id="lightbox-close">×</button><img id="lightbox-image" src="" alt=""><div><span class="eyebrow" id="lightbox-code"></span><h2 id="lightbox-title"></h2><p id="lightbox-meta"></p><a class="btn btn-gold" id="lightbox-wa" href="#" target="_blank" rel="noopener">Ask on WhatsApp</a></div></div></div>
-
-  <div class="enquiry-drawer" id="enquiry-drawer" aria-hidden="true">
-    <div class="drawer-backdrop" id="drawer-backdrop"></div>
-    <aside class="drawer-panel"><button class="drawer-close" id="drawer-close">×</button><span class="eyebrow">YOUR SHORTLIST</span><h2>Send these designs to <em>WhatsApp.</em></h2><div id="shortlist-items"></div><div class="drawer-actions"><button class="btn btn-gold" id="send-shortlist">Send enquiry</button><button class="btn btn-outline-dark" id="clear-shortlist">Clear</button></div></aside>
   </div>
 
-  <div class="mobile-bottom-bar"><button id="mobile-shortlist">♡ <span id="mobile-wishlist-count">0</span></button><button data-page-target="collections">Catalogue</button><a href="https://wa.me/916295721021" target="_blank" rel="noopener">WhatsApp</a></div>
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>New Anisha Jewellers</span><i>◆</i>
+      <span>Gold &amp; Silver</span><i>◆</i>
+      <span>BIS Hallmark</span><i>◆</i>
+      <span>Custom Design</span><i>◆</i>
+      <span>Bikour · West Bengal</span><i>◆</i>
+      <span>New Anisha Jewellers</span><i>◆</i>
+      <span>Gold &amp; Silver</span><i>◆</i>
+      <span>BIS Hallmark</span><i>◆</i>
+      <span>Custom Design</span><i>◆</i>
+      <span>Bikour · West Bengal</span><i>◆</i>
+    </div>
+  </div>
 
-  <footer class="site-footer"><div><img src="images/aj-logo.png" alt="New Anisha Jewellers"><h2>New Anisha Jewellers</h2><p>Gold &amp; Silver · Bikour</p></div><div><span class="eyebrow">EXPLORE</span><button data-page-target="collections">Catalogue</button><button data-page-target="gallery">Showroom</button><button data-page-target="visit">Visit Store</button></div><div><span class="eyebrow">CONTACT</span><a href="https://wa.me/916295721021" target="_blank" rel="noopener">WhatsApp</a><a href="tel:+916295721021">+91 62957 21021</a><a href="tel:+916297813053">+91 62978 13053</a></div><div><span class="eyebrow">ADDRESS</span><p>Near Fitness Club Gym,<br>34 No. National Highway,<br>Bikour, West Bengal 733215</p></div><small class="copyright">© <span id="current-year"></span> New Anisha Jewellers. Catalogue prices, weight and availability are confirmed by the showroom.</small></footer>
+  <!-- OCCASION -->
+  <section class="section section-ivory">
+    <div class="section-head">
+      <div class="section-num"><span>01</span><i>◆</i>Curated Discovery</div>
+      <h2>Shop by <em>occasion.</em></h2>
+      <p>Start with what you are shopping for — bridal, gold, rings, or silver.</p>
+    </div>
+    <div class="occasion-grid">
+      <a href="#collections/Bridal" class="occasion-card tall reveal">
+        <img src="images/catalogue/enhanced/pearl-choker.webp" alt="Bridal" loading="lazy">
+        <div class="occasion-body">
+          <span class="occasion-num">01 / Bridal</span>
+          <h3>Statement Sets</h3>
+          <p>Ceremony pieces &amp; bridal ensembles</p>
+        </div>
+      </a>
+      <a href="#collections/Gold" class="occasion-card reveal">
+        <img src="images/catalogue/enhanced/gold-bangle.webp" alt="Gold" loading="lazy">
+        <div class="occasion-body">
+          <span class="occasion-num">02 / Gold</span>
+          <h3>Classic Gold</h3>
+          <p>Every day elegance</p>
+        </div>
+      </a>
+      <a href="#collections/Rings" class="occasion-card reveal">
+        <img src="images/catalogue/enhanced/real-rings.webp" alt="Rings" loading="lazy">
+        <div class="occasion-body">
+          <span class="occasion-num">03 / Rings</span>
+          <h3>Rings</h3>
+          <p>Daily wear to special</p>
+        </div>
+      </a>
+      <a href="#collections/Silver" class="occasion-card reveal">
+        <img src="images/catalogue/enhanced/silver-rings.webp" alt="Silver" loading="lazy">
+        <div class="occasion-body">
+          <span class="occasion-num">04 / Silver</span>
+          <h3>Silver</h3>
+          <p>Elegant &amp; traditional</p>
+        </div>
+      </a>
+    </div>
+  </section>
 
-  <script src="js/main.js"></script>
+  <!-- FEATURED -->
+  <section class="section section-cream">
+    <div class="section-head">
+      <div class="section-num"><span>02</span><i>◆</i>Featured Designs</div>
+      <h2>Made to be <em>seen up close.</em></h2>
+      <p>Tap any design to view it large, shortlist it, or send a WhatsApp enquiry.</p>
+    </div>
+    <div class="product-grid" id="featured-grid"></div>
+    <div class="section-foot">
+      <a href="#collections" class="btn btn-text">View full catalogue →</a>
+    </div>
+  </section>
+
+  <!-- EDITORIAL -->
+  <section class="editorial">
+    <div class="editorial-image reveal">
+      <img src="images/enhanced/showroom-editorial.webp" alt="Showroom" loading="lazy">
+    </div>
+    <div class="editorial-body">
+      <div class="section-num"><span>03</span><i>◆</i>The Showroom</div>
+      <h2>Online for the <em>shortlist.</em><br>In-store for the <em>choice.</em></h2>
+      <p>See the finish, compare designs, check the details, and speak directly with our team at the counter.</p>
+      <ul class="editorial-list">
+        <li>Design shortlist</li>
+        <li>WhatsApp assistance</li>
+        <li>Store directions</li>
+        <li>Personal consultation</li>
+      </ul>
+      <a href="#visit" class="btn btn-solid">Plan your visit</a>
+    </div>
+  </section>
+
+  <!-- BRIDAL H-SCROLL -->
+  <section class="section section-espresso">
+    <div class="section-head">
+      <div class="section-num light"><span>04</span><i>◆</i>Bridal Edit</div>
+      <h2 class="light">Crafted for <em>your forever.</em></h2>
+      <p class="light">Swipe through our bridal collection.</p>
+    </div>
+    <div class="h-scroll">
+      <a href="#collections/Bridal" class="h-card"><img src="images/catalogue/enhanced/pearl-choker.webp" alt="Necklace Sets"><div class="h-card-body"><span>01</span><h3>Necklace Sets</h3></div></a>
+      <a href="#collections/Bangles" class="h-card"><img src="images/catalogue/enhanced/traditional-bangle.webp" alt="Bridal Bangles"><div class="h-card-body"><span>02</span><h3>Bridal Bangles</h3></div></a>
+      <a href="#collections/Bridal" class="h-card"><img src="images/catalogue/enhanced/white-flower-bangle.webp" alt="Bridal Rings"><div class="h-card-body"><span>03</span><h3>Bridal Rings</h3></div></a>
+      <a href="#collections/Bridal" class="h-card"><img src="images/catalogue/enhanced/pearl-choker-detail.webp" alt="Full Sets"><div class="h-card-body"><span>04</span><h3>Full Sets</h3></div></a>
+      <a href="#collections/Bridal" class="h-card"><img src="images/catalogue/enhanced/gold-bangle.webp" alt="Gold Sets"><div class="h-card-body"><span>05</span><h3>Gold Sets</h3></div></a>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section section-ivory">
+    <div class="section-head">
+      <div class="section-num"><span>05</span><i>◆</i>Testimonials</div>
+      <h2>Loved by our <em>customers.</em></h2>
+    </div>
+    <div class="reviews-track">
+      <div class="review reveal"><div class="review-quote">"</div><p>Beautiful designs and excellent service. The quality of gold is top-notch.</p><div class="review-author"><span>S</span><div><strong>Suman Das</strong><small>Verified Customer</small></div></div></div>
+      <div class="review reveal"><div class="review-quote">"</div><p>I got my bridal set from here. Everyone loved it — thank you for making my day special.</p><div class="review-author"><span>P</span><div><strong>Priya Roy</strong><small>Bridal Customer</small></div></div></div>
+      <div class="review reveal"><div class="review-quote">"</div><p>Best prices in the area and honest service. Highly recommended for quality jewellery.</p><div class="review-author"><span>R</span><div><strong>Rahul Sen</strong><small>Regular Customer</small></div></div></div>
+    </div>
+  </section>
+
+  <!-- SOCIAL -->
+  <section class="section section-espresso">
+    <div class="section-head">
+      <div class="section-num light"><span>06</span><i>◆</i>Follow the Sparkle</div>
+      <h2 class="light">On <em>Instagram.</em></h2>
+      <p class="light">@newanishajewellers</p>
+    </div>
+    <div class="social-grid">
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-card"><img src="images/catalogue/enhanced/pearl-choker.webp" alt="" loading="lazy"></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-card"><img src="images/catalogue/enhanced/gold-bangle.webp" alt="" loading="lazy"></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-card"><img src="images/catalogue/enhanced/traditional-bangle.webp" alt="" loading="lazy"></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-card"><img src="images/catalogue/enhanced/real-earrings.webp" alt="" loading="lazy"></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-card"><img src="images/catalogue/enhanced/silver-rings.webp" alt="" loading="lazy"></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="social-card"><img src="images/catalogue/enhanced/white-flower-bangle.webp" alt="" loading="lazy"></a>
+    </div>
+    <div class="section-foot">
+      <a href="https://instagram.com" target="_blank" rel="noopener" class="btn btn-ghost">Follow @newanishajewellers</a>
+    </div>
+  </section>
+
+  <!-- OWNERS -->
+  <section class="section section-cream">
+    <div class="section-head">
+      <div class="section-num"><span>07</span><i>◆</i>Meet the People</div>
+      <h2>A family showroom, <em>person to person.</em></h2>
+    </div>
+    <div class="owners-teaser">
+      <div class="owner-teaser reveal">
+        <div class="owner-img"><img src="images/owner-1.jpg" alt="Abhay Saha" loading="lazy"></div>
+        <div class="owner-info"><h3>Abhay Saha</h3><span>Store Owner</span></div>
+      </div>
+      <div class="owner-teaser reveal">
+        <div class="owner-img"><img src="images/owner-2.jpg" alt="Bijay Saha" loading="lazy"></div>
+        <div class="owner-info"><h3>Bijay Saha</h3><span>Store Owner</span></div>
+      </div>
+    </div>
+    <p class="owner-note">Original owner photos preserved — no retouching.</p>
+  </section>
+
+  <!-- VISIT BANNER -->
+  <section class="visit-banner">
+    <div class="visit-banner-inner">
+      <div class="section-num light"><span>08</span><i>◆</i>Ready to See It?</div>
+      <h2>Bring your shortlist to <em>New Anisha Jewellers.</em></h2>
+      <p>Near Fitness Club Gym · 34 No. National Highway · Bikour · WB 733215</p>
+      <div class="hero-actions">
+        <a href="#visit" class="btn btn-solid">Visit Store</a>
+        <a href="https://wa.me/916295721021" target="_blank" rel="noopener" class="btn btn-ghost">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- ============ COLLECTIONS ============ -->
+<section id="collections-page" class="page-section page-shell">
+  <nav class="breadcrumb"><a href="#home">Home</a><i>◆</i><span>Catalogue</span></nav>
+  <div class="page-head">
+    <div class="section-num"><span>01</span><i>◆</i>Catalogue</div>
+    <h1>Find your <em>next piece.</em></h1>
+    <p>Premium catalogue with a store-visit-first enquiry journey.</p>
+  </div>
+  <div class="catalogue-bar">
+    <div class="filter-row" id="filter-row">
+      <button class="filter-btn active" data-category="All">All</button>
+      <button class="filter-btn" data-category="Gold">Gold</button>
+      <button class="filter-btn" data-category="Silver">Silver</button>
+      <button class="filter-btn" data-category="Bangles">Bangles</button>
+      <button class="filter-btn" data-category="Necklaces">Necklaces</button>
+      <button class="filter-btn" data-category="Rings">Rings</button>
+      <button class="filter-btn" data-category="Earrings">Earrings</button>
+      <button class="filter-btn" data-category="Bridal">Bridal</button>
+    </div>
+    <div class="catalogue-tools">
+      <label class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="search-input" type="search" placeholder="Search design or code">
+      </label>
+      <select id="sort-select">
+        <option value="featured">Sort: Featured</option>
+        <option value="name">Name A–Z</option>
+        <option value="category">Category</option>
+      </select>
+    </div>
+  </div>
+  <div class="product-grid" id="product-grid"></div>
+</section>
+
+<!-- ============ PRODUCT ============ -->
+<section id="product-page" class="page-section page-shell">
+  <div id="product-detail-container"></div>
+</section>
+
+<!-- ============ BRIDAL ============ -->
+<section id="bridal-page" class="page-section">
+  <div class="bridal-hero">
+    <picture>
+      <source media="(max-width: 767px)" srcset="images/catalogue/enhanced/pearl-choker.webp">
+      <img src="images/enhanced/hero-generated-desktop.webp" alt="Bridal">
+    </picture>
+    <div class="bridal-hero-body">
+      <div class="section-num light"><i>◆</i>For Your Special Day</div>
+      <h1>Your forever<br><em>begins here.</em></h1>
+      <p>Timeless pieces crafted to make your wedding day unforgettable.</p>
+      <div class="hero-actions">
+        <a href="#appointment" class="btn btn-solid">Book Consultation</a>
+        <a href="https://wa.me/916295721021?text=Hi,%20I%20want%20to%20know%20about%20Bridal%20Collection" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <div class="section section-cream">
+    <div class="section-head">
+      <div class="section-num"><span>01</span><i>◆</i>Bridal Edit</div>
+      <h2>Crafted for <em>your forever.</em></h2>
+    </div>
+    <div class="bridal-grid">
+      <a href="#collections/Bridal" class="occasion-card reveal"><img src="images/catalogue/enhanced/pearl-choker.webp" alt="Necklace Sets" loading="lazy"><div class="occasion-body"><span class="occasion-num">01</span><h3>Necklace Sets</h3></div></a>
+      <a href="#collections/Bangles" class="occasion-card reveal"><img src="images/catalogue/enhanced/traditional-bangle.webp" alt="Bridal Bangles" loading="lazy"><div class="occasion-body"><span class="occasion-num">02</span><h3>Bridal Bangles</h3></div></a>
+      <a href="#collections/Bridal" class="occasion-card reveal"><img src="images/catalogue/enhanced/white-flower-bangle.webp" alt="Bridal Rings" loading="lazy"><div class="occasion-body"><span class="occasion-num">03</span><h3>Bridal Rings</h3></div></a>
+      <a href="#collections/Bridal" class="occasion-card reveal"><img src="images/catalogue/enhanced/pearl-choker-detail.webp" alt="Full Sets" loading="lazy"><div class="occasion-body"><span class="occasion-num">04</span><h3>Full Sets</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery-page" class="page-section page-shell">
+  <nav class="breadcrumb"><a href="#home">Home</a><i>◆</i><span>Showroom</span></nav>
+  <div class="page-head">
+    <div class="section-num"><span>01</span><i>◆</i>Real Showroom</div>
+    <h1>See the <em>store.</em></h1>
+    <p>Real photos from New Anisha Jewellers.</p>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-card wide reveal"><img src="images/enhanced/shop-exterior-enhanced.webp" alt="Exterior" loading="lazy"><span>Shop exterior</span></div>
+    <div class="gallery-card reveal"><img src="images/catalogue/enhanced/pearl-choker.webp" alt="Necklace" loading="lazy"><span>Necklace</span></div>
+    <div class="gallery-card reveal"><img src="images/catalogue/enhanced/gold-bangle.webp" alt="Bangles" loading="lazy"><span>Bangles</span></div>
+    <div class="gallery-card reveal"><img src="images/catalogue/enhanced/real-earrings.webp" alt="Earrings" loading="lazy"><span>Earrings</span></div>
+    <div class="gallery-card reveal"><img src="images/catalogue/enhanced/real-bracelet.webp" alt="Bracelet" loading="lazy"><span>Bracelet</span></div>
+    <div class="gallery-card reveal"><img src="images/catalogue/enhanced/silver-rings.webp" alt="Rings" loading="lazy"><span>Rings</span></div>
+  </div>
+</section>
+
+<!-- ============ GOLD RATE ============ -->
+<section id="gold-rate-page" class="page-section page-shell">
+  <nav class="breadcrumb"><a href="#home">Home</a><i>◆</i><span>Gold Rate</span></nav>
+  <div class="page-head">
+    <div class="section-num"><span>01</span><i>◆</i>Live Update</div>
+    <h1>Today's <em>gold rate.</em></h1>
+    <p>Rates are subject to market fluctuations. Contact us for the live counter rate.</p>
+  </div>
+  <div class="rate-table">
+    <div class="rate-header">
+      <span>Today's Rates</span>
+      <span class="rate-updated">Last updated: Today, 10:00 AM</span>
+    </div>
+    <table>
+      <tbody>
+        <tr><td>24K Gold</td><td class="rate-val">Ask on WhatsApp</td><td class="rate-trend"><span class="trend-up">▲</span></td></tr>
+        <tr><td>22K Gold</td><td class="rate-val">Ask on WhatsApp</td><td class="rate-trend"><span class="trend-up">▲</span></td></tr>
+        <tr><td>18K Gold</td><td class="rate-val">Ask on WhatsApp</td><td class="rate-trend"><span class="trend-up">▲</span></td></tr>
+        <tr><td>Silver (1kg)</td><td class="rate-val">Ask on WhatsApp</td><td class="rate-trend"><span class="trend-down">▼</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="section-foot">
+    <a href="https://wa.me/916295721021?text=Hi,%20please%20share%20today's%20live%20gold%20rate." target="_blank" rel="noopener" class="btn btn-solid">Get Live Rate on WhatsApp</a>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="reviews-page" class="page-section page-shell">
+  <nav class="breadcrumb"><a href="#home">Home</a><i>◆</i><span>Reviews</span></nav>
+  <div class="page-head">
+    <div class="section-num"><span>01</span><i>◆</i>Testimonials</div>
+    <h1>What our <em>customers say.</em></h1>
+  </div>
+  <div class="reviews-grid">
+    <div class="review reveal"><div class="review-quote">"</div><p>Beautiful designs and excellent service. The quality of gold is top-notch.</p><div class="review-author"><span>S</span><div><strong>Suman Das</strong><small>Verified</small></div></div></div>
+    <div class="review reveal"><div class="review-quote">"</div><p>I got my bridal set from here. Everyone loved it!</p><div class="review-author"><span>P</span><div><strong>Priya Roy</strong><small>Bridal Customer</small></div></div></div>
+    <div class="review reveal"><div class="review-quote">"</div><p>Best prices in the area and honest service.</p><div class="review-author"><span>R</span><div><strong>Rahul Sen</strong><small>Regular</small></div></div></div>
+    <div class="review reveal"><div class="review-quote">"</div><p>Bought a silver ring. Beautiful craftsmanship and genuine prices.</p><div class="review-author"><span>A</span><div><strong>Anita Ghosh</strong><small>Verified</small></div></div></div>
+  </div>
+  <div class="google-reviews reveal">
+    <div class="g-review-head">
+      <div class="g-logo">G</div>
+      <div><strong>Google Reviews</strong><small>4.9 ★ · 120+ reviews</small></div>
+    </div>
+    <a href="https://g.page/r/review" target="_blank" rel="noopener" class="btn btn-text">See all on Google →</a>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq-page" class="page-section page-shell">
+  <nav class="breadcrumb"><a href="#home">Home</a><i>◆</i><span>FAQ</span></nav>
+  <div class="page-head">
+    <div class="section-num"><span>01</span><i>◆</i>Help</div>
+    <h1>Frequently <em>asked.</em></h1>
+  </div>
+  <div class="faq-search">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input type="search" id="faq-search" placeholder="Search questions...">
+  </div>
+  <div class="faq-list" id="faq-container"></div>
+</section>
+
+<!-- ============ APPOINTMENT ============ -->
+<section id="appointment-page" class="page-section page-shell">
+  <nav class="breadcrumb"><a href="#home">Home</a><i>◆</i><span>Book Visit</span></nav>
+  <div class="page-head">
+    <div class="section-num"><span>01</span><i>◆</i>Personal</div>
+    <h1>Book a <em>visit.</em></h1>
+    <p>Schedule a personalized consultation with our jewellery experts.</p>
+  </div>
+  <form id="appointment-form" class="appointment-form">
+    <div class="field"><label>Name</label><input type="text" id="app-name" required placeholder="Your full name"></div>
+    <div class="field"><label>Phone</label><input type="tel" id="app-phone" inputmode="tel" required placeholder="+91 00000 00000"></div>
+    <div class="field-row">
+      <div class="field"><label>Date</label><input type="date" id="app-date" required></div>
+      <div class="field"><label>Time</label><input type="time" id="app-time" required></div>
+    </div>
+    <div class="field"><label>Consultation Type</label>
+      <select id="app-type">
+        <option>Store Visit</option>
+        <option>Video Consultation</option>
+        <option>WhatsApp Consultation</option>
+      </select>
+    </div>
+    <div class="field"><label>Message</label><textarea id="app-msg" rows="3" placeholder="Any specific requirement?"></textarea></div>
+    <button type="submit" class="btn btn-solid btn-block">Confirm via WhatsApp</button>
+  </form>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about-page" class="page-section page-shell">
+  <nav class="breadcrumb"><a href="#home">Home</a><i>◆</i><span>Our Story</span></nav>
+  <div class="page-head">
+    <div class="section-num"><span>01</span><i>◆</i>Our Story</div>
+    <h1>Meet the <em>people.</em></h1>
+  </div>
+  <div class="owners-grid">
+    <article class="reveal">
+      <img src="images/owner-1.jpg" alt="Abhay Saha" loading="lazy">
+      <div>
+        <span class="eyebrow">Store Owner</span>
+        <h2>Abhay Saha</h2>
+        <p>For enquiries and showroom assistance.</p>
+        <a href="https://wa.me/916295721021" target="_blank" rel="noopener">WhatsApp Abhay →</a>
+      </div>
+    </article>
+    <article class="reveal">
+      <img src="images/owner-2.jpg" alt="Bijay Saha" loading="lazy">
+      <div>
+        <span class="eyebrow">Store Owner</span>
+        <h2>Bijay Saha</h2>
+        <p>For product and showroom assistance.</p>
+        <a href="https://wa.me/916297813053" target="_blank" rel="noopener">WhatsApp Bijay →</a>
+      </div>
+    </article>
+  </div>
+  <p class="owner-note-large">Human photos are kept exactly as provided — no enhancement or AI modification.</p>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section id="visit-page" class="page-section page-shell">
+  <nav class="breadcrumb"><a href="#home">Home</a><i>◆</i><span>Visit</span></nav>
+  <div class="page-head">
+    <div class="section-num"><span>01</span><i>◆</i>Store Visit</div>
+    <h1>Come see it <em>in person.</em></h1>
+    <p>Shortlist online, message us for the details, then visit the showroom.</p>
+  </div>
+  <div class="visit-layout">
+    <div class="visit-info">
+      <div class="visit-card reveal"><span class="visit-icon">◆</span><h3>Address</h3><p>Near Fitness Club Gym, 34 No. National Highway, Bikour, West Bengal 733215</p></div>
+      <div class="visit-card reveal"><span class="visit-icon">◆</span><h3>Hours</h3><p>9:00 AM – 8:00 PM, daily</p></div>
+
+      <div class="visit-owners reveal">
+        <div class="section-num" style="margin-bottom:16px"><span>◆</span>Meet the Owners</div>
+        <p class="visit-owners-intro">Come meet us in person — we'll help you find the perfect piece.</p>
+
+        <div class="visit-owner-card">
+          <div class="visit-owner-img">
+            <img src="images/owner-1.jpg" alt="Abhay Saha" loading="lazy">
+          </div>
+          <div class="visit-owner-info">
+            <h4>Abhay Saha</h4>
+            <span>Store Owner</span>
+            <p>For enquiries &amp; showroom assistance</p>
+            <div class="visit-owner-actions">
+              <a href="https://wa.me/916295721021" target="_blank" rel="noopener" class="visit-owner-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+              </a>
+              <a href="tel:+916295721021" class="visit-owner-btn ghost">Call</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="visit-owner-card">
+          <div class="visit-owner-img">
+            <img src="images/owner-2.jpg" alt="Bijay Saha" loading="lazy">
+          </div>
+          <div class="visit-owner-info">
+            <h4>Bijay Saha</h4>
+            <span>Store Owner</span>
+            <p>For product &amp; showroom assistance</p>
+            <div class="visit-owner-actions">
+              <a href="https://wa.me/916297813053" target="_blank" rel="noopener" class="visit-owner-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+              </a>
+              <a href="tel:+916297813053" class="visit-owner-btn ghost">Call</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="visit-card reveal"><span class="visit-icon">◆</span><h3>WhatsApp</h3><p>+91 62957 21021</p></div>
+    </div>
+    <div class="visit-map reveal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.92784618744!2d88.3857983150287!3d25.08519998395056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBikour%2C%20West%20Bengal%20733215!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" title="Location"></iframe>
+    </div>
+  </div>
+  <div class="section-foot">
+    <a href="https://wa.me/916295721021?text=Hello,%20I%20would%20like%20to%20plan%20a%20showroom%20visit." target="_blank" rel="noopener" class="btn btn-solid">Plan on WhatsApp</a>
+    <a href="tel:+916295721021" class="btn btn-ghost">Call Store</a>
+  </div>
+</section>
+
+<!-- ============ 404 ============ -->
+<section id="notfound-page" class="page-section page-shell">
+  <div class="notfound">
+    <div class="notfound-num">404</div>
+    <div class="section-num"><i>◆</i>Not Found</div>
+    <h1>This page is <em>missing.</em></h1>
+    <p>The design you are looking for may have moved or been sold.</p>
+    <div class="hero-actions" style="justify-content:center">
+      <a href="#collections" class="btn btn-solid">Browse Catalogue</a>
+      <a href="#home" class="btn btn-ghost">Back to Home</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="search-overlay" aria-hidden="true">
+  <div class="search-overlay-inner">
+    <button class="search-close" id="search-close" aria-label="Close">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
+    <div class="section-num light"><i>◆</i>Search</div>
+    <input type="search" id="search-overlay-input" placeholder="Search designs, codes, categories..." autocomplete="off">
+    <div class="search-results" id="search-results"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+  <div class="lightbox-panel">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
+    <img id="lightbox-image" src="" alt="">
+    <div class="lightbox-info">
+      <span class="eyebrow" id="lightbox-code"></span>
+      <h2 id="lightbox-title"></h2>
+      <p id="lightbox-meta"></p>
+      <div class="lightbox-actions">
+        <a class="btn btn-solid" id="lightbox-wa" href="#" target="_blank" rel="noopener">Ask on WhatsApp</a>
+        <button class="btn btn-ghost" id="lightbox-view">View Details</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DRAWER -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="drawer-panel">
+    <button class="drawer-close" id="drawer-close" aria-label="Close">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+    </button>
+    <div class="drawer-head">
+      <span class="eyebrow">Your Shortlist</span>
+      <h2>Send designs to <em>WhatsApp.</em></h2>
+    </div>
+    <div id="shortlist-items" class="drawer-list"></div>
+    <div class="drawer-actions">
+      <button class="btn btn-solid" id="send-shortlist">Send Enquiry</button>
+      <button class="btn btn-ghost" id="clear-shortlist">Clear</button>
+    </div>
+  </aside>
+</div>
+
+<!-- STICKY PRODUCT BAR -->
+<div class="sticky-bar" id="sticky-bar"></div>
+
+<!-- MOBILE BOTTOM BAR -->
+<nav class="bottom-bar">
+  <a href="#home" data-nav="home">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    <span>Home</span>
+  </a>
+  <a href="#collections" data-nav="collections">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+    <span>Shop</span>
+  </a>
+  <a href="https://wa.me/916295721021" target="_blank" rel="noopener" class="bottom-fab" aria-label="WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <button id="mobile-shortlist" data-nav="wishlist">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    <span>Saved</span>
+    <span class="bottom-count" id="mobile-wishlist-count">0</span>
+  </button>
+  <a href="#visit" data-nav="visit">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <span>Visit</span>
+  </a>
+</nav>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="images/aj-logo.png" alt="New Anisha Jewellers">
+      <h2>New Anisha Jewellers</h2>
+      <p>Gold &amp; Silver · Bikour</p>
+      <div class="footer-social">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://wa.me/916295721021" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <span class="eyebrow">Explore</span>
+      <a href="#collections">Catalogue</a>
+      <a href="#bridal">Bridal</a>
+      <a href="#gallery">Showroom</a>
+      <a href="#gold-rate">Gold Rate</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <span class="eyebrow">Contact</span>
+      <a href="https://wa.me/916295721021" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="tel:+916295721021">+91 62957 21021</a>
+      <a href="tel:+916297813053">+91 62978 13053</a>
+    </div>
+    <div class="footer-col">
+      <span class="eyebrow">Visit</span>
+      <p>Near Fitness Club Gym,<br>34 No. National Highway,<br>Bikour, West Bengal 733215</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="current-year"></span> New Anisha Jewellers</span>
+    <span>BIS Hallmark Certified</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
